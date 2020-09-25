@@ -19,7 +19,7 @@ class Square extends React.Component {
   }
 }
 
-/* Grid component finishes setting up the game board*/
+/* Grid component actually fills out the board*/
 class Grid extends React.Component {
   render() {
     const width = (this.props.cols * 64);
@@ -71,6 +71,7 @@ class Main extends React.Component {
   }
 
   // Event handler for clicking on square
+  // Will toggle on/off current square and its immediate neighbors
   selectSquare = (row, col) => {
     let gridCopy = arrayClone(this.state.fillGrid);
     
@@ -134,6 +135,7 @@ class Main extends React.Component {
   }
 }
 
+// helper function so we don't update initial state/array directly 
 function arrayClone(arr) {
 	return JSON.parse(JSON.stringify(arr));
 }
