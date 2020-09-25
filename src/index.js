@@ -64,6 +64,7 @@ class Main extends React.Component {
     this.rows = 5;
     this.cols = 5;
     this.state = {
+      hasWon: false,
       numberOfMoves: 0,
       // Create the array of rows/columns, start all squares at "false"
       fillGrid: Array(this.rows).fill().map(() => Array(this.cols).fill(false))
@@ -87,9 +88,12 @@ class Main extends React.Component {
     flipSquare(row-1, col)
     flipSquare(row+1, col)
 
+    let hasWon = gridCopy.every(row => row.every(square => !square));
+
 		this.setState({
       fillGrid: gridCopy,
-      numberOfMoves: this.state.numberOfMoves + 1
+      numberOfMoves: this.state.numberOfMoves + 1,
+      hasWon: hasWon
 		});
   }
   
@@ -128,6 +132,7 @@ class Main extends React.Component {
           />
         </div>
         <div className="game-info">
+          {this.state.hasWon ? (<h2>You win!</h2>) : (<h2></h2>)}
           <h2>Number of Moves: {this.state.numberOfMoves}</h2>
         </div>
       </div>
