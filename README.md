@@ -1,4 +1,4 @@
-#Lights Out Game
+# Lights Out Game
 
 ## What is it? 
 "Lights Out" is a game from the 90's where the object is to take a 5x5 grid of lights and ... turn them all out. You can read more at the [Wikipedia Page](https://en.wikipedia.org/wiki/Lights_Out_(game)).
