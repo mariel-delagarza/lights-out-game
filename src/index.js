@@ -103,6 +103,7 @@ class Main extends React.Component {
     let gridCopy = arrayClone(this.state.fillGrid)
     for (let i = 0; i < this.rows; i++) {
       for (let j = 0; j < this.cols; j++) {
+        gridCopy[i][j] = false;
         if (Math.floor(Math.random() * 4) === 1) {
           gridCopy[i][j] = true;
         }
@@ -123,6 +124,7 @@ class Main extends React.Component {
     return (
       <div className="main">
         <h1 id="title">Lights Out</h1>
+        <button className="center" id="reset-button" onClick={this.resetSquares}>Reset?</button>
         <div className="game-board">
           <Grid 
             fillGrid={this.state.fillGrid}
