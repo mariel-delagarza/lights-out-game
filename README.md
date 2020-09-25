@@ -6,7 +6,7 @@
 ## How do you play?
 The grid will begin in a random state, with some lights on, some off. When you click on any given square, it will toggle itself on/off and toggle its immediate neighbors. 
 
-![](./exampleGrid.png)
+![Example Grid](./exampleGrid.png)
 
 As you continue to toggle squares, you will see the pattern change. The aim is to find a way to make sure all of them are off. If not, there is a reset button for you.
 
