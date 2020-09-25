@@ -1,68 +1,17 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#Lights Out Game
 
-## Available Scripts
+## What is it? 
+"Lights Out" is a game from the 90's where the object is to take a 5x5 grid of lights and ... turn them all out. You can read more at the [Wikipedia Page](https://en.wikipedia.org/wiki/Lights_Out_(game)).
 
-In the project directory, you can run:
+## How do you play?
+The grid will begin in a random state, with some lights on, some off. When you click on any given square, it will toggle itself on/off and toggle its immediate neighbors. 
 
-### `yarn start`
+![](./exampleGrid.png)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+As you continue to toggle squares, you will see the pattern change. The aim is to find a way to make sure all of them are off. If not, there is a reset button for you.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## What is it built with?
+This is built in JavaScript using the React library. It was started with [create-react-app](https://react.js.org/docs/create-a-new-react-app.html#create-react-app) and then modified as needed. 
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## How do I use it myself?
+You can fork and clone this repo and open it in your text editor and terminal (I use VSCode). In the terminal, run 'npm start' or 'yarn start' and it'll spin up the server. The page will update on its own as you make changes to the code and save the files; there is no need to manually refresh the page during development.
