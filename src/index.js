@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-/*import './index.css';*/
+import './index.css';
 
 /*Main Component will hold all others*/
 class Main extends React.Component {
@@ -9,8 +9,8 @@ class Main extends React.Component {
   // event handler methods to an instance
   constructor() {
     super();
-    this.rows = 30;
-    this.cols = 50;
+    this.rows = 5;
+    this.cols = 5;
     this.state = {
       numberOfMoves: 0,
       // Create the array of rows/columns, start all squares at "false"
@@ -22,7 +22,7 @@ class Main extends React.Component {
   render() {
     return (
       <div className="main">
-        <h1>Lights Out</h1>
+        <h1 id="title">Lights Out</h1>
         <div className="game-board">
           hello
         </div>

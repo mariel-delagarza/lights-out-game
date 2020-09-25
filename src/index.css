@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+
+body {
+  background-image: url(background.jpg) 
+}
+
+#title {
+  font-family: 'Amatic SC', cursive;
+  font-size: 3rem;
+  color: white;
+}
+
+.game-info {
+  font-family: 'Amatic SC', cursive;
+  font-size: 2rem;
+  color: white;
+}
