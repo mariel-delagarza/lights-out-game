@@ -126,7 +126,7 @@ class Main extends React.Component {
     return (
       <div className="main">
         <h1 id="title">Lights Out</h1>
-        <button className="center" id="reset-button" onClick={this.resetSquares}>Reset?</button>
+        <button className="center" id="reset-button" onClick={this.resetSquares}>Restart?</button>
         <div className="game-board">
           <Grid 
             fillGrid={this.state.fillGrid}
