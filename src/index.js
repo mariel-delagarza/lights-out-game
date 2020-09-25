@@ -12,10 +12,12 @@ class Main extends React.Component {
     this.cols = 50;
     this.state = {
       numberOfMoves: 0,
+      // Create the array of rows/columns, start all squares at "false"
       fillGrid: Array(this.rows).fill().map(() => Array(this.cols).fill(false))
     }
   }
 
+  // Render specifies what should actually display on the screen
   render() {
     return (
       <div className="main">
