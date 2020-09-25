@@ -3,15 +3,28 @@ import ReactDOM from 'react-dom';
 /*import './index.css';*/
 
 class Main extends React.Component {
+
+  // Constructors initialize local state and bind 
+  // event handler methods to an instance
+  constructor() {
+    super();
+    this.rows = 30;
+    this.cols = 50;
+    this.state = {
+      numberOfMoves: 0,
+      fillGrid: Array(this.rows).fill().map(() => Array(this.cols).fill(false))
+    }
+  }
+
   render() {
     return (
       <div className="main">
+        <h1>Lights Out</h1>
         <div className="game-board">
-          Hello World
+          hello
         </div>
         <div className="game-info">
-          <div>{/* status */}</div>
-          <ol>{/* TODO */}</ol>
+          <h2>Number of Moves: {this.state.numberOfMoves}</h2>
         </div>
       </div>
     );
