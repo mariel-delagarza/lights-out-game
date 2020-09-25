@@ -76,7 +76,25 @@ class Main extends React.Component {
 		this.setState({
 			fillGrid: gridCopy
 		});
-	}
+  }
+  
+  resetSquares = () => {
+    let gridCopy = arrayClone(this.state.fillGrid)
+    for (let i = 0; i < this.rows; i++) {
+      for (let j = 0; j < this.cols; j++) {
+        if (Math.floor(Math.random() * 4) === 1) {
+          gridCopy[i][j] = true;
+        }
+      }
+    }
+    this.setState({
+      fillGrid: gridCopy
+    })
+  }
+
+  componentDidMount() {
+    this.resetSquares();
+  }
 
   // Render specifies what should actually display on the screen
   render() {
