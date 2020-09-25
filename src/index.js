@@ -70,14 +70,30 @@ class Main extends React.Component {
     }
   }
 
+  // Event handler for clicking on square
   selectSquare = (row, col) => {
-		let gridCopy = arrayClone(this.state.fillGrid);
-		gridCopy[row][col] = !gridCopy[row][col];
+    let gridCopy = arrayClone(this.state.fillGrid);
+    
+    function flipSquare(row, col) {
+      if (row > -1 && row < 5 &&  col > -1 && col < 5) {
+        gridCopy[row][col] = !gridCopy[row][col];
+      }
+    }
+
+    flipSquare(row, col)
+    flipSquare(row, col-1)
+    flipSquare(row, col+1)
+    flipSquare(row-1, col)
+    flipSquare(row+1, col)
+
 		this.setState({
-			fillGrid: gridCopy
+      fillGrid: gridCopy,
+      numberOfMoves: this.state.numberOfMoves + 1
 		});
   }
   
+
+  // Creates random pattern of on/off squares 
   resetSquares = () => {
     let gridCopy = arrayClone(this.state.fillGrid)
     for (let i = 0; i < this.rows; i++) {
@@ -92,6 +108,7 @@ class Main extends React.Component {
     })
   }
 
+  // On load, will run resetSquares so random board is ready to play
   componentDidMount() {
     this.resetSquares();
   }
