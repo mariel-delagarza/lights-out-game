@@ -110,7 +110,9 @@ class Main extends React.Component {
       }
     }
     this.setState({
-      fillGrid: gridCopy
+      fillGrid: gridCopy,
+      hasWon: false,
+      numberOfMoves: 0
     })
   }
 
