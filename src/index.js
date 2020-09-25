@@ -1,6 +1,41 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+/*import './index.css';*/
 
-ReactDOM.render(<App />, document.getElementById('root'));
+class Main extends React.Component {
+
+  // Constructors initialize local state and bind 
+  // event handler methods to an instance
+  constructor() {
+    super();
+    this.rows = 30;
+    this.cols = 50;
+    this.state = {
+      numberOfMoves: 0,
+      // Create the array of rows/columns, start all squares at "false"
+      fillGrid: Array(this.rows).fill().map(() => Array(this.cols).fill(false))
+    }
+  }
+
+  // Render specifies what should actually display on the screen
+  render() {
+    return (
+      <div className="main">
+        <h1>Lights Out</h1>
+        <div className="game-board">
+          hello
+        </div>
+        <div className="game-info">
+          <h2>Number of Moves: {this.state.numberOfMoves}</h2>
+        </div>
+      </div>
+    );
+  }
+}
+
+// ========================================
+
+ReactDOM.render(
+  <Main />,
+  document.getElementById('root')
+);
