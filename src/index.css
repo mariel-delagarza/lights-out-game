@@ -14,7 +14,7 @@ body {
 
 .square {
   display: inline-block;    
-  border: 1px solid black;
+  border: 1px solid rgba(255,255,255, 0.3);
   width: 63px;
   height: 63px;
   margin-left: -1px;
