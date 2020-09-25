@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 /*import './index.css';*/
 
+/*Main Component will hold all others*/
 class Main extends React.Component {
 
   // Constructors initialize local state and bind 
